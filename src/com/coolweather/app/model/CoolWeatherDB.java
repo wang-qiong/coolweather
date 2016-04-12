@@ -1,20 +1,22 @@
-package model;
+package com.coolweather.app.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.coolweather.app.db.CoolWeatherOpenHelper;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import db.CoolWeatherOpenHelper;
+
 
 public class CoolWeatherDB {
 	//数据库名
 	public static final String DB_NAME="cool_weather";
 	
 	//数据库版本
-	public static final int VERSION=1;
+	public static final int VERSION=2;
 	
 	private static CoolWeatherDB coolWeatherDB;
 	private SQLiteDatabase db;
@@ -55,6 +57,9 @@ public class CoolWeatherDB {
 				province.setProvinceCode(cursor.getString(cursor.getColumnIndex("province_code")));
 				list.add(province);
 				}while(cursor.moveToNext());
+		}
+		if(cursor!=null){
+			cursor.close();
 		}
 		return list;
 		
@@ -126,3 +131,4 @@ public class CoolWeatherDB {
 	
 
 }
+

@@ -1,4 +1,4 @@
-package model;
+package com.coolweather.app.model;
 
 public class Province {
 	private int id;
@@ -14,7 +14,7 @@ public class Province {
 	public String getProvinceName(){
 		return provinceName;
 	}
-	public void setProvinceName(String provinceNmae){
+	public void setProvinceName(String provinceName){
 		this.provinceName=provinceName;
 	}
 	public String getProviceCode(){
@@ -25,3 +25,4 @@ public class Province {
 	}
 
 }
+

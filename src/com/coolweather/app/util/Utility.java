@@ -99,12 +99,6 @@ public class Utility {
 			String temp2=weatherInfo.getString("temp2");
 			String weatherDesp=weatherInfo.getString("weather");
 			String publishTime=weatherInfo.getString("ptime");
-			Log.d("MainActivity", "cityName is "+cityName);
-			Log.d("MainActivity", "weatherCode is "+weatherCode);
-			Log.d("MainActivity", "temp1 is "+temp1);
-			Log.d("MainActivity", "temp2 is "+temp2);
-			Log.d("MainActivity", "weatherDesp is "+weatherDesp);
-			Log.d("MainActivity", "publishTime is "+publishTime);
 			
 			saveWeatherInfo(context,cityName,weatherCode,temp1,temp2,weatherDesp,publishTime);
 			
